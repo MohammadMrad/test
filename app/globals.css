@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-text: var(--font-payda);
+  --font-number: var(--font-payda-fanum);
+
+  /* Primary & Secondary */
+  --color-primary: #6735f6; /* اصلی، بنفش برند */
+  --color-secondary: #c4bde4; /* مکمل، بنفش ملایم */
+
+  /* Neutral */
+  --color-neutral-50: #fefefe; /* خیلی روشن - پس‌زمینه‌ها */
+  --color-neutral-700: #4f4f4f; /* متن اصلی (body text) */
+  --color-neutral-900: #24272a; /* سرتیترها، ناوبارها، تاکید */
+
+  /* Accent */
+  --color-accent-beige: #f3e9d9; /* بژ - نمی‌تونه neutral باشه */
+  --color-accent-orange: #dc9800; /* تاکیدی نارنجی */
+  --color-accent-yellow: #ffcc00; /* تاکیدی زرد */
+
+  --swiper-pagination-color: #dc9800; /* Color of active bullet */
+  --swiper-pagination-bullet-inactive-color: #dc9800; /* Color of inactive bullets */
+  --swiper-pagination-bullet-inactive-opacity: 0.5; /* Opacity of inactive bullets */
+  --swiper-pagination-bullet-size: 10px; /* Size of bullets */
+  --swiper-pagination-bullet-horizontal-gap: 5px; /* Gap between bullets */
+}
+
+/* .font-text {
+  font-family: var(--font-payda);
+}
+
+.font-number {
+  font-family: var(--font-payda-fanum);
+} */
+
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+
+  @media screen and (min-width: 640px) {
+    max-width: 640px;
+    padding-inline: 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+@layer base {
+  .swiper-pagination-bullet {
+    @apply !size-2.5 !m-0.5 !opacity-100 !bg-secondary rounded-full transition-all duration-300;
+  }
+  .swiper-pagination-bullet-active {
+    @apply !w-6 !opacity-100 !bg-primary !rounded-md;
+  }
+}
